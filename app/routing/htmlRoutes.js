@@ -7,12 +7,12 @@ var path = require("path");
 module.exports = function(app) {
 
     //html GET requests, code handles when users "visit " a page, user is shown an html page of content
-    app.get("/survey", function(req, res) {
+    app.get("/survey", function (req, res) {
         res.sendFile(path.join(_dirname, "/../public/survey.html"));
     });
 
     //IF no matching route is found default to home
-    app.get("*", function(req, res) {
+    app.get("/", function (req, res) {
         res.sendFile(path.join(_dirname, "/..public/home.hmtl"));
     });
 };
