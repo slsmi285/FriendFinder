@@ -4,7 +4,7 @@
 var friends = [
   {
   "name":"Brennan Elliott",
-  "photo":"/app/data/images/image.jpg",
+  "photo":"https://github.com/slsmi285/FriendFinder/issues/2",
   "scores":[
       5,
       1,
@@ -20,7 +20,7 @@ var friends = [
 },
 {
   "name":"Anderew Walker",
-  "photo":"/app/data/images/image.jpg",
+  "photo":"https://github.com/slsmi285/FriendFinder/issues/1",
   "scores":[
      4,
      2,
@@ -36,14 +36,24 @@ var friends = [
 },
 {
   "name":"Danica McKeller",
-  "photo":"/app/data/images/image.jpg",
+  "photo":"https://github.com/slsmi285/FriendFinder/issues/3#issue-659314952",
   "scores":[
-     
+      4,
+      5,
+      2,
+      4,
+      2,
+      4,
+      3,
+      3,
+      2,
+      3,
+      3
     ]
 },
 {
   "name":"Ryan Paevey",
-  "photo":"/app/data/images/image.jpg",
+  "photo":"https://github.com/slsmi285/FriendFinder/issues/6#issue-659315629",
   "scores":[
       5,
       5,
