@@ -1,75 +1,58 @@
-//* A GET route with the url `/api/friends`. This will be used to display a JSON of all possible friends.
-   //* A POST routes `/api/friends`. This will be used to handle incoming survey results. This route will also be used to handle the compatibility logic.
+// The apiRoutes.js file includes two basic routes for app.get function and app.post function which used for displaying a JASON data and incoming survey results of all possible friends:
+// The app.post(in the apiRoutes.js) used to handle the compatibility logic.
 
-   //LOAD DAta
-   //linking routes to a series of data sources, data sources hold arrays of information on all possible friends.
-   var friends = require("../data/friends");
 
-   //Routing
+var friends = require('../data/friends.js');
 
-   module.exports = function(app) {
-      //API GET Requests, code handles when users visit a page, user is shown a JSON of the data in the table
-
-      app.get("/api/friends", function(req, res) {
-         res.json(friends);
-      });
-
-      //API POST requests, when a user submits a form  - submits data to the server
-      //when user submits form data (JSON object), JSON is pushed to the appropriate JAVASCRIPT array
-
-      app.post("/api/friends", function(req, res) {
-         //Server will respond to a user's survey result
-         //THEN compare those results against every user in the database
-         //It will then calculate the difference between each of the numbers and the user's numbers
-         //It will then choose the user with the least differences as the "best friend match", in the case of multiple users with the same result, it will choose the first match
-         //after the test, it will push the user to the database
-         console.log(req.body.name);
-         console.log(req.body);
-
-         //creating an object to hold the 'best match', Loop is needed as it will be updated -- to go thru the options, for loop is needed
-         var bestMatch = {
+// Routing the apiRoutes with the app.get and app.post functions
+module.exports = function (app) {
+    // The app.get request handles when user 'visits' a page
+    app.get('/api/friends', function (req, res) {
+        res.json(friends);
+    });
+    // The app.post request handles when a user submits a form and thus submits data to the surver
+    app.post('/api/friends', function (req, res) {
+        // loop through all of the possible options
+        var bestMatch = {
             name: "",
             photo: "",
-            friendDifference: Infinity
-         };
+            friendDifference: 1000
+        };
 
-         //use the result of the user's survey POST and parse it.
-         var userData = req.body;
-         var userScores = userData.scores;
+        // To take the result of the user's survey POST and parse it
+        var userData = req.body;
+        var userScores = userData.scores;
+        // To take the results of the user's name and photo, other than the survey questions, to post and parse it
+        var userName = userData.name;
+        var userPhoto = userData.photo;
 
-         //create variable to calculate difference between user's score and the scores of each option in database
-         var totalDifference;
+        // The variable used to calculate the difference b/n the user's socres and the scores of each user
+        var totalDifference = 0;
 
-         //loop thru the options/possibilities in the database
-         for (var i = 0; i < friends.length; i++) {
-            var currentFriend = friends[i];
-            totalDifference = 0
+        //loop through the friends data array of objects to get each friends scores
+        for (var i = 0; i < friends.length - 1; i++) {
+            console.log(friends[i].name);
+            totalDifference = 0;
 
-            console.log(currentFriend.name);
+            //loop through that friends score and the users score and calculate the absolute difference between the two and push that to the total difference variable set above
+            for (var j = 0; j < 10; j++) {
+                // We calculate the difference between the scores and sum them into the totalDifference
+                totalDifference += Math.abs(parseInt(userScores[j]) - parseInt(friends[i].scores[j]));
+                // If the sum of differences is less then the differences of the current "best match"
+                if (totalDifference <= bestMatch.friendDifference) {
 
-         //loop thru all the scores of each friend
-         for (var j = 0; j < currentFriend.scores.length; j++) {
-            var currentFriendScore = currentFriend.scores[j];
-            var currentUserScore = userScores[j];
+                    // Reset the bestMatch to be the new friend. 
+                    bestMatch.name = friends[i].name;
+                    bestMatch.photo = friends[i].photo;
+                    bestMatch.friendDifference = totalDifference;
+                }
+            }
+        }
 
-            //calculate the difference between the scores and sum them inot the totalDifference
-            totalDifference += Math.abs(parseInt(currentUserScore) - parseInt(currentFriendScore));
-         }
+        // The push method use to save user's data to the database
+        friends.push(userData);
 
-         //sum of differences is less then the differences of the current "best match"
-         if (totalDifference <= bestMatch.friendDifference) {
-            //reset the bestMatch to be the new friend
-            bestMatch.name = currentFriend.name;
-            bestMatch.photo = currentFriend.photo;
-            bestMatch.friendDifference = totalDifference;
-
-         }
-
-      }
-         //save user's data to the database (this take place after the check, other the database will always return that the user si the users best friend)
-         friends.push(userData);
-
-         //return a JSON with the user's bestMatch. to be used by the html in the next page
-         res.json(friends[bestMatch]);
-      });
-   };
+        //The res.json method will return a JSON data with the user's match which was looped through frieds data array. 
+        res.json(bestMatch);
+    });
+};

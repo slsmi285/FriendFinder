@@ -5,24 +5,35 @@ var path = require("path");
 var fs = require("fs");
 
 
-//Express Configuration, sets up the basic properties for express server
+// ==============================================================================
+// EXPRESS CONFIGURATION
+// This sets up the basic properties for our express server
+// ==============================================================================
+
+// Tells node that we are creating an "express" server
 var app = express();
 
-//sets an initial port, to be used later in the listener
-var PORT = process.env.PORT || 3000;
+// Sets an initial port. We"ll use this later in our listener
+var PORT = process.env.PORT || 8080;
 
-//bodyparser makes it easy for the server to interpret data sent to it - standard format
+// Sets up the Express app to handle data parsing
 app.use(bodyParser.urlencoded({ extended: true }));
-//parse application/json
 app.use(bodyParser.json());
 
-//Router - gives server a map of how to respond when users visit or request data from various URLS
+// ================================================================================
+// ROUTER
+// The below points our server to a series of "route" files.
+// These routes give our server a "map" of how to respond when users visit or request data from various URLs.
+// ================================================================================
+
 require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes")(app);
 
+// =============================================================================
+// LISTENER
+// The below code effectively "starts" our server
+// =============================================================================
 
-
-//Listener, below starts the server
-  app.listen(PORT, function() {
-    console.log("App listening on PORT: " + PORT);
-  });
+app.listen(PORT, function() {
+  console.log("App listening on PORT: " + PORT);
+});
