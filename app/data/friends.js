@@ -3,9 +3,9 @@
 
 var friends = [
   {
-  "name":"Brennan Elliott",
-  "photo":"https://github.com/slsmi285/FriendFinder/issues/2",
-  "scores":[
+  name:"Brennan Elliott",
+  photo: "https://www.hallmarkchannel.com/all-of-my-heart-the-wedding/cast/brennan-elliott",
+  scores:[
       5,
       1,
       4,
@@ -19,9 +19,9 @@ var friends = [
     ]
 },
 {
-  "name":"Anderew Walker",
-  "photo":"https://github.com/slsmi285/FriendFinder/issues/1",
-  "scores":[
+  name:"Andrew Walker",
+  photo: "https://www.hallmarkchannel.com/cast/andrew-walker",
+  scores:[
      4,
      2,
      5,
@@ -35,9 +35,9 @@ var friends = [
     ]
 },
 {
-  "name":"Danica McKeller",
-  "photo":"https://github.com/slsmi285/FriendFinder/issues/3#issue-659314952",
-  "scores":[
+  name:"Danica McKeller",
+  photo: "https://www.hallmarkchannel.com/perfect-match/cast/danica-mckellar",
+  scores:[
       4,
       5,
       2,
@@ -52,9 +52,9 @@ var friends = [
     ]
 },
 {
-  "name":"Ryan Paevey",
-  "photo":"https://github.com/slsmi285/FriendFinder/issues/6#issue-659315629",
-  "scores":[
+  name:"Ryan Paevey",
+  photo: "https://www.pinterest.com/pin/225461525075208919/",
+  scores:[
       5,
       5,
       2,
@@ -69,9 +69,9 @@ var friends = [
     ]
 },
 {
-  "name":"Lacey Chabert",
-  "photo":"/app/data/images/image.jpg",
-  "scores":[
+  name:"Lacey Chabert",
+  photo: "https://www.hallmarkchannel.com/all-of-my-heart/cast/lacey-chabert",
+  scores:[
       3,
       3,
       4,
@@ -85,9 +85,9 @@ var friends = [
     ]
 },
 {
-  "name":"Jill Wagner",
-  "photo":"/app/data/images/image.jpg",
-  "scores":[
+  name:"Jill Wagner",
+  photo: "https://www.hallmarkchannel.com/autumn-dreams/cast/jill-wagner",
+  scores:[
      4,
      4,
      2,
@@ -105,20 +105,6 @@ var friends = [
   
 
 
-/*Determine the user's most compatible friend using the following as a guide:
-
-   * Convert each user's results into a simple array of numbers (ex: `[5, 1, 4, 4, 5, 1, 2, 5, 4, 1]`).
-   * With that done, compare the difference between current user's scores against those from other users, question by question. Add up the differences to calculate the `totalDifference`.
-     * Example:
-       * User 1: `[5, 1, 4, 4, 5, 1, 2, 5, 4, 1]`
-       * User 2: `[3, 2, 6, 4, 5, 1, 2, 5, 4, 1]`
-       * Total Difference: **2 + 1 + 2 =** **_5_**
-   * Remember to use the absolute value of the differences. Put another way: no negative solutions! Your app should calculate both `5-3` and `3-5` as `2`, and so on.
-   * The closest match will be the user with the least amount of difference.*/
-
-
-  /*Once you've found the current user's most compatible friend, display the result as a modal pop-up.
-  * The modal should display both the name and picture of the closest match.*/
 
   //export the array
   module.exports = friends;

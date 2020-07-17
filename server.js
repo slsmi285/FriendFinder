@@ -8,7 +8,7 @@ var path = require("path");
 var app = express();
 
 //sets an initial port, to be used later in the listener
-var PORT = process.env.PORT || 8083;
+var PORT = process.env.PORT || 8086;
 
 //bodyparser makes it easy for the server to interpret data sent to it - standard format
 app.use(bodyParser.urlencoded({ extended: true }));
