@@ -2,10 +2,27 @@
 //Data - below will hold all of possible friends
 
 var friends = [
+
   {
-  name:"Brennan Elliott",
-  photo: "https://www.hallmarkchannel.com/all-of-my-heart-the-wedding/cast/brennan-elliott",
-  scores:[
+    name:"Ahmed",
+    photo:"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    scores:[
+        5,
+        1,
+        4,
+        4,
+        5,
+        1,
+        2,
+        5,
+        4,
+        1
+      ]
+  },
+  {
+    name: "Brennan Elliott",
+    photo: "https://www.hallmarkchannel.com/all-of-my-heart-the-wedding/cast/brennan-elliott",
+    scores: [
       5,
       1,
       4,
@@ -17,27 +34,27 @@ var friends = [
       4,
       1
     ]
-},
-{
-  name:"Andrew Walker",
-  photo: "https://www.hallmarkchannel.com/cast/andrew-walker",
-  scores:[
-     4,
-     2,
-     5,
-     1,
-     3,
-     2,
-     2,
-     1,
-     3,
-     2
+  },
+  {
+    name: "Andrew Walker",
+    photo: "https://www.hallmarkchannel.com/cast/andrew-walker",
+    scores: [
+      4,
+      2,
+      5,
+      1,
+      3,
+      2,
+      2,
+      1,
+      3,
+      2
     ]
-},
-{
-  name:"Danica McKeller",
-  photo: "https://www.hallmarkchannel.com/perfect-match/cast/danica-mckellar",
-  scores:[
+  },
+  {
+    name: "Danica McKeller",
+    photo: "https://www.hallmarkchannel.com/perfect-match/cast/danica-mckellar",
+    scores: [
       4,
       5,
       2,
@@ -50,11 +67,11 @@ var friends = [
       3,
       3
     ]
-},
-{
-  name:"Ryan Paevey",
-  photo: "https://www.pinterest.com/pin/225461525075208919/",
-  scores:[
+  },
+  {
+    name: "Ryan Paevey",
+    photo: "https://www.pinterest.com/pin/225461525075208919/",
+    scores: [
       5,
       5,
       2,
@@ -67,11 +84,11 @@ var friends = [
       5,
       5
     ]
-},
-{
-  name:"Lacey Chabert",
-  photo: "https://www.hallmarkchannel.com/all-of-my-heart/cast/lacey-chabert",
-  scores:[
+  },
+  {
+    name: "Lacey Chabert",
+    photo: "https://www.hallmarkchannel.com/all-of-my-heart/cast/lacey-chabert",
+    scores: [
       3,
       3,
       4,
@@ -83,28 +100,28 @@ var friends = [
       2,
       3
     ]
-},
-{
-  name:"Jill Wagner",
-  photo: "https://www.hallmarkchannel.com/autumn-dreams/cast/jill-wagner",
-  scores:[
-     4,
-     4,
-     2,
-     3,
-     2,
-     2,
-     3,
-     2,
-     4,
-     5
+  },
+  {
+    name: "Jill Wagner",
+    photo: "https://www.hallmarkchannel.com/autumn-dreams/cast/jill-wagner",
+    scores: [
+      4,
+      4,
+      2,
+      3,
+      2,
+      2,
+      3,
+      2,
+      4,
+      5
     ]
-}
+  }
 ];
-  
-  
 
 
 
-  //export the array
-  module.exports = friends;
+
+
+//export the array
+module.exports = friends;

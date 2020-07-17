@@ -23,6 +23,8 @@
          //It will then calculate the difference between each of the numbers and the user's numbers
          //It will then choose the user with the least differences as the "best friend match", in the case of multiple users with the same result, it will choose the first match
          //after the test, it will push the user to the database
+         console.log(req.body.name);
+         console.log(req.body);
 
          //creating an object to hold the 'best match', Loop is needed as it will be updated -- to go thru the options, for loop is needed
          var bestMatch = {
@@ -54,7 +56,7 @@
             totalDifference += Math.abs(parseInt(currentUserScore) - parseInt(currentFriendScore));
          }
 
-         //sum of differences is les then the differences of the current "best match"
+         //sum of differences is less then the differences of the current "best match"
          if (totalDifference <= bestMatch.friendDifference) {
             //reset the bestMatch to be the new friend
             bestMatch.name = currentFriend.name;
@@ -68,6 +70,6 @@
          friends.push(userData);
 
          //return a JSON with the user's bestMatch. to be used by the html in the next page
-         res.json(bestMatch);
+         res.json(friends[bestMatch]);
       });
    };

@@ -2,13 +2,14 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
+var fs = require("fs");
 
 
 //Express Configuration, sets up the basic properties for express server
 var app = express();
 
 //sets an initial port, to be used later in the listener
-var PORT = process.env.PORT || 8086;
+var PORT = process.env.PORT || 3000;
 
 //bodyparser makes it easy for the server to interpret data sent to it - standard format
 app.use(bodyParser.urlencoded({ extended: true }));

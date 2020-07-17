@@ -1,5 +1,6 @@
 # FriendFinder
-A compatability-based ["Friend Finder"]() application.  This full-stack site will take in results from your users' surveys, then compare their answers with those from other users.  The app will then display the name and picture of the user with the best overall match.
+A compatability-based ["Friend Finder"]() application. A minor project to create a Friend Finder application that utilizes communication from user input, server side data and specific matching algorithms to match like users with one another.
+
 
 
 
