@@ -15,6 +15,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //parse application/json
 app.use(bodyParser.json());
 
+//Router - gives server a map of how to respond when users visit or request data from various URLS
+require("./app/routing/apiRoutes")(app);
+require("./app/routing/htmlRoutes")(app);
 
 
 

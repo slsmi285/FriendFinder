@@ -31,12 +31,43 @@
             friendDifference: Infinity
          };
 
+         //use the result of the user's survey POST and parse it.
+         var userData = req.body;
+         var userScores = userData.scores;
+
          //create variable to calculate difference between user's score and the scores of each option in database
          var totalDifference;
-         
+
          //loop thru the options/possibilities in the database
          for (var i = 0; i < friends.length; i++) {
             var currentFriend = friends[i];
+            totalDifference = 0
+
+            console.log(currentFriend.name);
+
+         //loop thru all the scores of each friend
+         for (var j = 0; j < currentFriend.scores.length; j++) {
+            var currentFriendScore = currentFriend.scores[j];
+            var currentUserScore = userScores[j];
+
+            //calculate the difference between the scores and sum them inot the totalDifference
+            totalDifference += Math.abs(parseInt(currentUserScore) - parseInt(currentFriendScore));
          }
-      })
-   }
+
+         //sum of differences is les then the differences of the current "best match"
+         if (totalDifference <= bestMatch.friendDifference) {
+            //reset the bestMatch to be the new friend
+            bestMatch.name = currentFriend.name;
+            bestMatch.photo = currentFriend.photo;
+            bestMatch.friendDifference = totalDifference;
+
+         }
+
+      }
+         //save user's data to the database (this take place after the check, other the database will always return that the user si the users best friend)
+         friends.push(userData);
+
+         //return a JSON with the user's bestMatch. to be used by the html in the next page
+         res.json(bestMatch);
+      });
+   };
