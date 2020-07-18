@@ -4,9 +4,9 @@
 var friends = [
 
   {
-    "name": "Ahmed",
-    "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-    "scores": [
+    name: "Ahmed",
+    photo: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    scores: [
       "5",
       "2",
       "2",
@@ -20,9 +20,9 @@ var friends = [
     ]
   },
   {
-    "name": "Brennan Elliott",
-    "photo": "https://www.hallmarkchannel.com/all-of-my-heart-the-wedding/cast/brennan-elliott",
-    "scores": [
+    name: "Brennan Elliott",
+    photo: "https://www.hallmarkchannel.com/all-of-my-heart-the-wedding/cast/brennan-elliott",
+    scores: [
       "3",
       "3",
       "4",
@@ -36,9 +36,9 @@ var friends = [
     ]
   },
   {
-    "name": "Andrew Walker",
-    "photo": "https://www.hallmarkchannel.com/cast/andrew-walker",
-    "scores": [
+    name: "Andrew Walker",
+    photo: "https://www.hallmarkchannel.com/cast/andrew-walker",
+    scores: [
       "4",
       "3",
       "4",
@@ -52,9 +52,9 @@ var friends = [
     ]
   },
   {
-    "name": "Danica McKeller",
-    "photo": "https://www.hallmarkchannel.com/perfect-match/cast/danica-mckellar",
-    "scores": [
+    name: "Danica McKeller",
+    photo: "https://www.hallmarkchannel.com/perfect-match/cast/danica-mckellar",
+    scores: [
       "4",
       "4",
       "2",
@@ -68,9 +68,9 @@ var friends = [
     ]
   },
   {
-    "name": "Ryan Paevey",
-    "photo": "https://www.pinterest.com/pin/225461525075208919/",
-    "scores": [
+    name: "Ryan Paevey",
+    photo: "https://www.pinterest.com/pin/225461525075208919/",
+    scores: [
       "3",
       "3",
       "4",
@@ -84,9 +84,9 @@ var friends = [
     ]
   },
   {
-    "name": "Lacey Chabert",
-    "photo": "https://www.hallmarkchannel.com/all-of-my-heart/cast/lacey-chabert",
-    "scores": [
+    name: "Lacey Chabert",
+    photo: "https://www.hallmarkchannel.com/all-of-my-heart/cast/lacey-chabert",
+    scores: [
       "4",
       "3",
       "4",
@@ -100,9 +100,9 @@ var friends = [
     ]
   },
   {
-    "name": "Jill Wagner",
-    "photo": "https://www.hallmarkchannel.com/autumn-dreams/cast/jill-wagner",
-    "scores": [
+    name: "Jill Wagner",
+    photo: "https://www.hallmarkchannel.com/autumn-dreams/cast/jill-wagner",
+    scores: [
       "5",
       "1",
       "4",
@@ -120,6 +120,5 @@ var friends = [
 
 
 
-
-//export the array
+// Here we export the array. This makes it accessible to other files using require.
 module.exports = friends;

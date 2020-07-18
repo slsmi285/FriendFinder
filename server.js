@@ -1,9 +1,10 @@
-//Dependcies Require packages
+// ==============================================================================
+// DEPENDENCIES
+// Series of npm packages that we will use to give our server useful functionality
+// ==============================================================================
+
 var express = require("express");
 var bodyParser = require("body-parser");
-var path = require("path");
-var fs = require("fs");
-
 
 // ==============================================================================
 // EXPRESS CONFIGURATION
@@ -14,12 +15,15 @@ var fs = require("fs");
 var app = express();
 
 // Sets an initial port. We"ll use this later in our listener
-var PORT = process.env.PORT || 7900;
+var PORT = process.env.PORT || 8700;
 
-// Sets up the Express app to handle data parsing
-// Sets up the Express app to handle data parsing
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+// BodyParser makes it easy for our server to interpret data sent to it.
+// The code below is pretty standard.
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: true }));
+// parse application/json
+app.use(bodyParser.json());
 
 // ================================================================================
 // ROUTER
@@ -30,10 +34,10 @@ app.use(express.json());
 require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes")(app);
 
-// =============================================================================
+// ==============================================================================
 // LISTENER
 // The below code effectively "starts" our server
-// =============================================================================
+// ==============================================================================
 
 app.listen(PORT, function() {
   console.log("App listening on PORT: " + PORT);
