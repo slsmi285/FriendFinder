@@ -4,8 +4,8 @@
 var friends = [
 
   {
-    name: "Ahmed",
-    photo: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    name: "Sam Neil",
+    photo: "https://i.pinimg.com/originals/c4/33/c5/c433c5068fba98b112b1bc6247d9dccf.jpg",
     scores: [
       "5",
       "2",
@@ -21,7 +21,7 @@ var friends = [
   },
   {
     name: "Brennan Elliott",
-    photo: "https://www.hallmarkchannel.com/all-of-my-heart-the-wedding/cast/brennan-elliott",
+    photo: "https://i.pinimg.com/236x/33/39/f4/3339f42ccb1dcdc343b14641e489bd45--guy-senior-pictures-guy-pictures.jpg",
     scores: [
       "3",
       "3",
@@ -37,7 +37,7 @@ var friends = [
   },
   {
     name: "Andrew Walker",
-    photo: "https://www.hallmarkchannel.com/cast/andrew-walker",
+    photo: "https://www3.pictures.zimbio.com/gi/28th+Annual+Movieguide+Awards+Gala+XLixVX5TJtul.jpg",
     scores: [
       "4",
       "3",
@@ -53,7 +53,7 @@ var friends = [
   },
   {
     name: "Danica McKeller",
-    photo: "https://www.hallmarkchannel.com/perfect-match/cast/danica-mckellar",
+    photo: "https://upload.wikimedia.org/wikipedia/commons/b/b5/2018-us-nationalbookfestival-danica-mckellar.jpg",
     scores: [
       "4",
       "4",
@@ -69,7 +69,7 @@ var friends = [
   },
   {
     name: "Ryan Paevey",
-    photo: "https://www.pinterest.com/pin/225461525075208919/",
+    photo: "https://i.pinimg.com/564x/70/7f/ac/707facc07c115e0f9df05ec5f390ea7e.jpg",
     scores: [
       "3",
       "3",
@@ -85,7 +85,7 @@ var friends = [
   },
   {
     name: "Lacey Chabert",
-    photo: "https://www.hallmarkchannel.com/all-of-my-heart/cast/lacey-chabert",
+    photo: "https://netstorage-legit.akamaized.net/images/dbc8ee9b5c29cbb7.jpg",
     scores: [
       "4",
       "3",
@@ -101,7 +101,7 @@ var friends = [
   },
   {
     name: "Jill Wagner",
-    photo: "https://www.hallmarkchannel.com/autumn-dreams/cast/jill-wagner",
+    photo: "https://i.pinimg.com/236x/b0/35/17/b03517a5902b006887c84ed4423116f6--sticky-fingaz-jill-wagner.jpg",
     scores: [
       "5",
       "1",
