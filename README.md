@@ -1,5 +1,5 @@
 # FriendFinder
-A compatability-based [Friend Finder]() application. A minor project to create a Friend Finder application that utilizes communication from user input, server side data and specific matching algorithms to match like users with one another.
+A compatability-based Friend Finder application. A minor project to create a Friend Finder application that utilizes communication from user input, server side data and specific matching algorithms to match like users with one another.
 
 
 
@@ -21,3 +21,5 @@ A compatability-based [Friend Finder]() application. A minor project to create a
 
 #### Best Match
 ![Best Match](https://github.com/slsmi285/FriendFinder/blob/master/app/images/BestMatch.PNG)
+
+[Heroku](https://whispering-refuge-91027.herokuapp.com/)
